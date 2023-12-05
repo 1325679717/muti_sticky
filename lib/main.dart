@@ -74,8 +74,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               title: Container(
                   height: 30,
                   child: Stack(
-                children: [Positioned(top: -offset +3, child: Text(widget.title))],
-              )),
+                    children: [Positioned(top: -offset + 3, child: Text(widget.title))],
+                  )),
               bottom: TabBar(
                 tabs: titleTabList.map((e) => Text(e)).toList(),
                 controller: controller,
