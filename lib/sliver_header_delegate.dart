@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
   BuildContext parentContext;
 
