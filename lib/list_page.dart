@@ -6,6 +6,7 @@ import 'package:muti_sticky/transform_preferred/transform_preferred_tab_tool.dar
 class ListPage extends StatefulWidget {
   final TabController? tabController;
   final int? index;
+
   const ListPage({super.key, required this.index, this.tabController});
 
   @override
@@ -15,6 +16,7 @@ class ListPage extends StatefulWidget {
 class _ListPageState extends State<ListPage> {
   final GlobalKey<TransformState> transformKey = GlobalKey();
   final ScrollController scrollController = ScrollController();
+
   @override
   void initState() {
     super.initState();
@@ -24,6 +26,7 @@ class _ListPageState extends State<ListPage> {
         index: widget.index,
         transformKey: transformKey);
   }
+
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
@@ -45,7 +48,12 @@ class _ListPageState extends State<ListPage> {
             delegate: SliverHeaderDelegate(
               parentContext: context,
               builder: (_, double shrinkOffset, __) {
-                return Container(color: Colors.white, padding: EdgeInsets.only(top: 12), child: Center(child: Text("StickHeader"),));
+                return Container(
+                    color: Colors.white,
+                    padding: EdgeInsets.only(top: 12),
+                    child: Center(
+                      child: Text("StickHeader"),
+                    ));
               },
               fixHeight: 90,
             ),
